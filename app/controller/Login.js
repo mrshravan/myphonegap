@@ -35,10 +35,10 @@ Ext.define('Sample.controller.Login', {
         var me = this,
             loginView = me.getLoginView();
 
-        if (username.length === 0 || password.length === 0) {
+        /*if (username.length === 0 || password.length === 0) {
             loginView.showSignInFailedMessage('Please enter your username and password.');
             return;
-        }
+        }*/
 
         loginView.setMasked({
             xtype: 'loadmask',
