@@ -1,4 +1,4 @@
-Ext.define('Sample.view.Login', {
+Ext.define('kdApp.view.Login', {
     extend: 'Ext.form.Panel',
     alias: "widget.loginview",
     requires: ['Ext.form.FieldSet', 'Ext.form.Password', 'Ext.Label', 'Ext.Img', 'Ext.util.DelayedTask'],

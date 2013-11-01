@@ -1,4 +1,4 @@
-Ext.define('Sample.view.MainMenu', {
+Ext.define('kdApp.view.MainMenu', {
     extend: 'Ext.Panel',
     requires: ['Ext.TitleBar'],
     alias: 'widget.mainmenuview',
@@ -18,12 +18,12 @@ Ext.define('Sample.view.MainMenu', {
                     itemId: 'mainMenu',
                     align: 'left'
                 },
-				/* {
+				{
                     xtype: 'button',
                     text: 'Log Off',
                     itemId: 'logOffButton',
                     align: 'right'
-                }, */
+                }, 
 				{ 
 				   iconCls: 'user',
 				   align: 'right'
@@ -62,7 +62,8 @@ Ext.define('Sample.view.MainMenu', {
 					
 				},
 				{ 
-					iconCls: 'refresh',				
+					iconCls: 'refresh',
+					itemId: 'refresh',
 				},
 				{ 
 					iconCls: 'home',				
@@ -86,9 +87,16 @@ Ext.define('Sample.view.MainMenu', {
             delegate: '#logOffButton',
             event: 'tap',
             fn: 'onLogOffButtonTap'
+        },{
+            delegate: '#refresh',
+            event: 'tap',
+            fn: 'onRefreshButtonTap'
         }]
     },
     onLogOffButtonTap: function () {
+        this.fireEvent('onSignOffCommand');
+    },
+	onLogOffButtonTap: function () {
         this.fireEvent('onSignOffCommand');
     }
 });

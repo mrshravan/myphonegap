@@ -1,4 +1,4 @@
-Ext.define('Sample.controller.Login', {
+Ext.define('kdApp.controller.Login', {
     extend: 'Ext.app.Controller',
     config: {
         refs: {
@@ -10,7 +10,8 @@ Ext.define('Sample.controller.Login', {
                 signInCommand: 'onSignInCommand'
             },
             mainMenuView: {
-                onSignOffCommand: 'onSignOffCommand'
+                onSignOffCommand: 'onSignOffCommand',
+				onRefreshCommand: 'onRefreshCommand'
             }
         }
     },
@@ -95,9 +96,7 @@ Ext.define('Sample.controller.Login', {
     },
 
     onSignOffCommand: function () {
-
         var me = this;
-
         Ext.Ajax.request({
             url: '../../services/logoff.ashx',
             method: 'post',
@@ -113,7 +112,25 @@ Ext.define('Sample.controller.Login', {
                 // TODO: You need to handle this condition.
             }
         });
-
         Ext.Viewport.animateActiveItem(this.getLoginView(), this.getSlideRightTransition());
+    },
+	onRefreshCommand: function () {
+        var me = this;
+        Ext.Ajax.request({
+            url: '../../services/logoff.ashx',
+            method: 'post',
+            params: {
+                sessionToken: me.sessionToken
+            },
+            success: function (response) {
+
+                // TODO: You need to handle this condition.
+            },
+            failure: function (response) {
+
+                // TODO: You need to handle this condition.
+            }
+        });
+        Ext.Viewport.animateActiveItem(this.getMainMenuView(), this.getSlideRightTransition());
     }
 });
