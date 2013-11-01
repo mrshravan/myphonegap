@@ -12,18 +12,23 @@ Ext.define('kdApp.view.MainMenu', {
             docked: 'top',
             items: [
                 
-				{
-                    xtype: 'button',
-                    text: 'Menu',
-                    itemId: 'mainMenu',
-                    align: 'left'
-                },
-				{
-                    xtype: 'button',
-                    text: 'Log Off',
-                    itemId: 'logOffButton',
-                    align: 'right'
-                }, 
+				// {
+                    // xtype: 'button',
+                    // text: 'Menu',
+                    // itemId: 'mainMenu',
+                    // align: 'left'
+                // }
+				{ 
+					iconCls: 'arrow_left' ,
+					align: 'left'
+					
+				},
+				// {
+                    // xtype: 'button',
+                    // text: 'Log Off',
+                    // itemId: 'logOffButton',
+                    // align: 'right'
+                // }, 
 				{ 
 				   iconCls: 'user',
 				   align: 'right'
@@ -31,53 +36,32 @@ Ext.define('kdApp.view.MainMenu', {
             ]
         },
 		{
-		  xtype:'spacer',
-		  padding: '5px'
-		},		
-		{
-            xtype: 'button',
-            text: 'Write Diary',
-            itemId: 'writeDiary',
-            align: 'center'
-			//padding: '10px',
-        },
-		{
-		  xtype:'spacer',
-		  padding: '5px'
+                xtype: 'label',
+                html: 'Diary',
 		},
+		
 		{
-            xtype: 'button',
-            text: 'Read Diary',
-            itemId: 'readDiary',
-			//padding: '10px',
-            align: 'center'
-        },
+                    xtype: 'textareafield',
+                    maxRows: 4,
+                    name: 'bio'
+                },
+		
 		{
             xtype: 'titlebar',
             docked: 'bottom',
             items: [
-                { 
-					iconCls: 'arrow_left' ,
-					align: 'left'
-					
-				},
+                
+				
 				{ 
-					iconCls: 'refresh',
-					itemId: 'refresh',
+					iconCls: 'compose',	
+					align: 'left'					
 				},
-				{ 
-					iconCls: 'home',				
-				},
-				{ 
-					iconCls: 'compose',				
-				},
-				{ 
-					iconCls: 'settings',				
-				},
-                { 
-					iconCls: 'more',
-					align: 'right'
-				}
+				{
+                    xtype: 'button',
+                    text: 'Read',
+                    itemId: 'writeId',
+                    align: 'right'
+                },				
 				
             ]
         },
