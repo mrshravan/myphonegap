@@ -10,8 +10,8 @@ Ext.define('kdApp.view.Login', {
                 //src: Ext.Viewport.getOrientation() == 'portrait' ? '../../../img/login.png' : '../../../img/login-small.png',
                 // src: Ext.Viewport.getOrientation() == 'portrait' ? 'img/dear_diary.gif' : 'img/dear_diary.gif',
                 // src: Ext.Viewport.getOrientation() == 'portrait' ? 'img/diary.jpg' : 'img/diary.jpg',
-                src: Ext.Viewport.getOrientation() == 'portrait' ? 'img/kidsdiary.jpg' : 'img/kidsdiary.jpg',
-                style: Ext.Viewport.getOrientation() == 'portrait' ? 'width:150px;height:150px;margin:auto' : 'width:150px;height:150px;margin:auto'
+                src: Ext.Viewport.getOrientation() == 'portrait' ? 'img/book.png' : 'img/book.png',
+                style: Ext.Viewport.getOrientation() == 'portrait' ? 'width:100px;height:100px;margin:auto' : 'width:80px;height:80px;margin:auto'
             },
             {
                 xtype: 'label',

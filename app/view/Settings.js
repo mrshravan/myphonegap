@@ -1,7 +1,7 @@
-Ext.define('kdApp.view.MainMenu', {
+Ext.define('kdApp.view.Settings', {
     extend: 'Ext.Panel',
     requires: ['Ext.TitleBar'],
-    alias: 'widget.mainmenuview',
+    alias: 'widget.settingsview',
 	
     config: {
         items: [
@@ -11,7 +11,7 @@ Ext.define('kdApp.view.MainMenu', {
             items: [
 				{ 
 					xtype: 'label',
-					html: '<font size=2>Write diary</font>',
+					html: '<font size=2>Settings</font>',
 				},
 				{ 
 					xtype: 'button',
