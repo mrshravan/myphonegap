@@ -1,13 +1,9 @@
 Ext.application({
     name: 'kdApp',
-    views: ['Login','MainMenu','ReadDiary','Settings'],
-    controllers:['Login'],
-    // launch: function () {
-        // Ext.Viewport.add([
-            // { xtype: 'loginview' },
-            // { xtype: 'mainmenuview' }
-        // ]);
-    // }
+    views: ['Login','MainMenu','ReadDiary','Settings','ContactsMain'],
+    controllers:['Login','Application'],
+	stores: ['Contacts'],
+	models: ['Contact'],
 	launch: function () {
         Ext.create('Ext.TabPanel', {
             fullscreen: true,
@@ -41,6 +37,10 @@ Ext.application({
                 xtype: 'settingsview',
                 iconCls: 'settings',
                 title: 'settings'
+            },{
+                xtype: 'contactsview',
+                iconCls: 'user',
+                title: 'Contacts'
             },
 			{			
                 iconCls: 'icnHom',

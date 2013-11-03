@@ -6,11 +6,8 @@ Ext.define('kdApp.view.Login', {
         title: 'Login',
         items: [
             {
-                xtype: 'image',
-                //src: Ext.Viewport.getOrientation() == 'portrait' ? '../../../img/login.png' : '../../../img/login-small.png',
-                // src: Ext.Viewport.getOrientation() == 'portrait' ? 'img/dear_diary.gif' : 'img/dear_diary.gif',
-                // src: Ext.Viewport.getOrientation() == 'portrait' ? 'img/diary.jpg' : 'img/diary.jpg',
-                src: Ext.Viewport.getOrientation() == 'portrait' ? 'img/book.png' : 'img/book.png',
+                xtype: 'image',               
+                src: Ext.Viewport.getOrientation() == 'portrait' ? 'resources/icons/book.png' : 'resources/icons/book.png',
                 style: Ext.Viewport.getOrientation() == 'portrait' ? 'width:100px;height:100px;margin:auto' : 'width:80px;height:80px;margin:auto'
             },
             {
