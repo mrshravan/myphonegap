@@ -24,7 +24,7 @@ Ext.define('kdApp.view.MainMenu', {
         },
 		{
 			xtype: 'textareafield',
-			maxRows: 10,
+			maxRows: 3,
 			name: 'bio'
 		}
         ],
